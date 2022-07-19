@@ -1,0 +1,656 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: black;
+  font-family: "Roboto Condensed", sans-serif;
+}
+:root {
+  --primary: rgba(241, 236, 64, 1);
+  --secoundry: #ffffff;
+
+  --footer: #2d333f;
+}
+
+.container {
+  width: 100%;
+  padding: 0 20vh;
+  margin: 0 auto;
+}
+
+header.nav {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* border-bottom: 11vh; */
+  /* border-radius: 23%; */
+  /* width: 100%; */
+  position: fixed;
+  /* bottom: 80vh; */
+}
+/* flex */
+
+.flex {
+  display: flex;
+}
+.item-center {
+  align-items: center;
+}
+.justify-bet {
+  justify-content: space-between;
+}
+
+header.nav .navbar .label img {
+  border-radius: 50%;
+  width: 22px;
+  cursor: pointer;
+}
+header.nav .navbar {
+  /* padding: 50px 0; */
+  /* position: relative; */
+  /* top: 17px; */
+  /* position: fixed; */
+}
+
+header.nav .navbar ul {
+  display: flex;
+}
+header.nav .navbar a {
+  text-decoration: none;
+  margin: 0 3vh;
+  padding: 0.25rem 0.35rem;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  color: var(--secoundry);
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease;
+}
+header.nav .navbar a:hover {
+  color: var(--footer);
+  background: var(--primary);
+}
+header.nav .navbar ul li {
+  text-decoration: none;
+  list-style: none;
+}
+header.nav .navbar .logo img {
+  width: 20%;
+  height: 100%;
+}
+
+.dropdown .svg {
+  color: white;
+  margin: 3px 18px;
+  padding-left: 10px;
+  cursor: pointer;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+
+  position: absolute;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px;
+  z-index: 1;
+}
+.dropdown-content a {
+  color: var(--secoundry);
+  padding: 9px 0;
+  font-size: 17px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+section.is-home .name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+@media (max-width: 1100px) {
+  header.nav .navbar .label {
+    position: fixed;
+    top: 84px;
+    left: -100%;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.35s ease;
+  }
+  #click {
+    display: none;
+  }
+
+  #click:checked ~ .label {
+    left: 0;
+  }
+  header.nav .navbar .menu {
+    display: block;
+  }
+  header.nav .navbar .label ul {
+    display: block;
+    text-align: center;
+  }
+  header.nav .navbar .label ul li {
+    margin: 40px 0;
+    line-height: 10vh;
+  }
+  header.nav .navbar .label ul li a {
+    font-size: 3vh;
+    border: 2px solid transparent;
+    background: var(--primary);
+    color: black;
+    font-weight: 600;
+    font-size: 3vh;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+  }
+
+  header.nav .navbar .label ul li a:hover {
+    color: var(--primary);
+    background: black;
+  }
+
+  header.nav .navbar .label .dropdown {
+    position: relative;
+    bottom: 22px;
+    left: 15px;
+  }
+}
+header.nav .navbar .menu {
+  color: var(--primary);
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 1100px) {
+  header.nav .navbar .menu {
+    display: block;
+  }
+}
+
+#click {
+  display: none;
+}
+
+section.is-home {
+  background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(sigmund-4khkLZuJEYI-unsplash.jpg);
+  position: relative;
+  bottom: 10px;
+  z-index: -1;
+  background-attachment: fixed;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.justi-cent {
+  justify-content: center;
+}
+section.is-home {
+  display: flex;
+
+  text-align: center;
+}
+section.is-home .name .improve h1 {
+  font-size: 8vh;
+  color: var(--secoundry);
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+section.is-home .name .improve h2 {
+  font-size: 5vh;
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+section.is-home .name .btn button {
+  font-size: 3vh;
+  font-weight: 600;
+  font-family: "ralewey-medium";
+  padding: 0.5rem 1.5rem;
+  background: var(--primary);
+  color: black;
+  border: 2px solid var(--primary);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+section.is-home .name .improve {
+  margin-top: 15vh;
+}
+section.about .about-info .PARAGRAPH {
+  width: 130vh;
+  height: 100vh;
+  z-index: -2;
+  background: var(--primary);
+  border: 4px solid transparent;
+  border-radius: 10px;
+}
+section.about .about-info img {
+  width: 100%;
+  position: relative;
+  right: 18vh;
+  z-index: -1;
+  border: 2px solid transparent;
+  border-radius: 10px;
+}
+section.about .about-info .para {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: left;
+}
+section.about .about-info .PARAGRAPH h2 {
+  padding: 40px 53px;
+  font: 600;
+  font-size: 2.5rem;
+}
+section.about .about-info .PARAGRAPH p {
+  padding: 10px 150px 10px 10px;
+  line-height: 4.5vh;
+  font-size: 1.2rem;
+  color: black;
+  font-weight: 400;
+}
+
+section.about .about-info {
+  padding-top: 100px;
+}
+section.about .about-info .para .img-cont {
+  background-color: black;
+  width: 124vh;
+
+  height: 75vh;
+  background: url(elec4.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-attachment: fixed;
+  position: relative;
+  right: 60px;
+  z-index: -1;
+}
+section.is-home .name .btn {
+  padding-top: 15px;
+}
+
+section.services .services-info .info-ser img {
+  width: 250px;
+  height: 50vh;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px 0px;
+}
+section.services .services-info .info-ser {
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 20px 20px;
+  margin: 50px 12px;
+  background-color: var(--secoundry);
+}
+section.services .services-info .info-ser h2,
+h4 {
+  color: black;
+  text-align: center;
+  margin: 10px 0;
+}
+section.services .services-info {
+  background: var(--primary);
+
+  margin: 20px 0;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 0px 18px 8px 0px;
+}
+section.services .services-info h1 {
+  text-align: center;
+  font-size: 2rem;
+  position: relative;
+  left: 80vh;
+}
+
+section.services .services-info .info-ser button {
+  background: black;
+  padding: 0.5rem 1rem;
+  color: var(--secoundry);
+  border: 2px solid transparent;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin: 5px 76px;
+  font-family: "Poppins", sans-serif;
+}
+section.services .services-info .info-ser button:hover {
+  background: var(--primary);
+  color: black;
+}
+section.services .services-info {
+  padding: 50px 0px;
+}
+section.services .services-info .info-ser h2 {
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+section.services .services-info .info-ser h4 {
+  font-size: 2vh;
+  font-family: "EB Garamond", serif;
+}
+footer.foot {
+  background: var(--primary);
+  width: 100%;
+  height: 65vh;
+  padding: 12.5vh 0;
+}
+footer.foot .footer-about {
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+footer.foot .container h1 {
+  text-align: center;
+  padding-bottom: 12.5vh;
+}
+footer.foot .footer-about .address h1 {
+  padding: 10px 10px;
+  text-align: center;
+}
+footer.foot .footer-about .address h2 {
+  padding: 10px 0;
+}
+footer.foot .footer-about .tel h3 {
+  text-align: center;
+  padding: 20px 0px;
+}
+footer.foot .footer-about .tel a {
+  color: black;
+  padding: 0 10px;
+}
+footer.foot .footer-about .tel a i {
+  width: 25px;
+}
+footer.foot .footer-about .subscribe input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 2px solid black;
+}
+footer.foot .footer-about .subscribe input:hover {
+  outline: none;
+}
+footer.foot .footer-about .subscribe .input-wrap {
+  padding: 10px;
+}
+footer.foot .footer-about .subscribe .input-wrap button {
+  padding: 0.5rem;
+  background-color: black;
+  border: 2px solid black;
+  color: var(--primary);
+  margin: 0 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+footer.foot .footer-about .subscribe .input-wrap button:hover {
+  background: var(--primary);
+  color: black;
+}
+footer.foot .footer-about h1 {
+  position: relative;
+  bottom: 12.5vh;
+  left: 50%;
+  padding: 0vh 3vh 0vh 0vh;
+}
+
+.flex1 {
+  flex: 1;
+}
+footer.copyright {
+  background-color: var(--secoundry);
+  text-align: center;
+  padding: 15px 0;
+}
+footer.copyright a {
+  color: black;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  header.nav .container {
+    padding: 0 5px;
+    margin: 0 10px;
+  }
+  header.nav .container .navbar svg {
+    padding: 0 1px 0px 0px;
+    position: relative;
+    right: 25px;
+  }
+  header.nav .container .navbar img,
+  .svg {
+    padding-top: 5px;
+  }
+
+  section.is-home .name .improve h1 {
+    font-size: 2.5rem;
+  }
+  section.is-home .name .improve h2 {
+    font-size: 1.8rem;
+  }
+  section.is-home .name .improve button {
+    padding: 0.2rem 0.2rem;
+    font-size: 1.2rem;
+    font-weight: normal;
+    cursor: pointer;
+  }
+  section.is-home .name .improve button:hover {
+    background: rgba(0, 0, 0, 0.5);
+    color: var(--secoundry);
+  }
+
+  section.about .about-info .para .PARAGRAPH h2 {
+    padding: 10px 10px;
+    font: 600;
+    font-size: 2.5rem;
+  }
+  section.about .container {
+    padding: 0 5px;
+    margin: 0 10px;
+  }
+  section.about .about-info .para .PARAGRAPH p {
+    padding: 10px 100px 10px 10px;
+    line-height: 3.5vh;
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 400;
+  }
+  section.about .about-info .para .img-cont {
+    background-color: white;
+    width: 100vh;
+
+    height: 50vh;
+  }
+  section.about .about-info .para .PARAGRAPH {
+    height: 70vh;
+  }
+  section.services .container {
+    padding: 0 5px;
+    margin: 0 10px;
+  }
+  section.services .services-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+  }
+  section.services .container{
+    padding: 0 5px;
+    margin: 0 10px;
+  
+  
+  }
+
+  footer.foot .footer-about{
+    flex-direction: column;
+  }
+  }
+  section.services .services-info .info-ser {
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    padding: 20px 20px;
+    margin: px 12px;
+    background-color: var(--secoundry);
+  }
+
+  footer.foot .container {
+    padding: 0 5px;
+    margin: 0 10px;
+  }
+  footer.foot .footer-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+   
+    padding: 40px 0;
+  }
+  footer.foot .footer-about .subscribe {
+    padding-bottom: 20px;
+  }
+  footer.foot .container h1 {
+    position: relative;
+    left: 10px;
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 7px;
+    padding-top: 0px;
+  }
+  footer.foot .container hr {
+    display: none;
+  }
+  footer.foot .footer-about .address h2,
+  p {
+    text-align: center;
+  }
+  footer.foot .footer-about .address {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  footer.foot .footer-about .tel {
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  footer.foot .footer-about .subscribe .input-wrap p {
+    padding: 40px 0;
+  }
+  footer.foot {
+    height: 80vh;
+  }
+  footer.foot .footer-about .tel h3 {
+    text-align: center;
+  }
+  footer.foot .footer-about .subscribe h3 {
+    padding-bottom: 5px;
+    padding-top: 25px;
+    text-align: center;
+  }
+  footer.foot .footer-about .subscribe p {
+    text-align: right;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  section.about .about-info .para .img-cont {
+    display: none;
+  }
+  section.about .about-info .PARAGRAPH {
+    background: url(2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  section.about .about-info .PARAGRAPH P,
+  h2 {
+    text-align: center;
+  }
+  section.about .about-info .para .PARAGRAPH P {
+    padding: 0px 0px 0px 0px;
+    line-height: 2.5vh;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 400;
+  }
+  section.about .about-info .para {
+    position: relative;
+    bottom: 80px;
+    right: 10px;
+  }
+  section.is-home .improve {
+    padding: 0%;
+    /* margin: 0%; */
+  }
+
+  section.services .services-info {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 80px;
+    z-index: -1;
+  }
+  section.services .services-info .info-ser {
+    padding: auto;
+    margin: 10px;
+  }
+  footer.foot .footer-about {
+    z-index: -1;
+  }
+  footer {
+    z-index: -1;
+  }
+  section.services .services-info {
+    position: relative;
+    right: 10px;
+  }
+  section.services .services-info .info-ser {
+    border: 3px solid black;
+  }
+
+
+}
+
+@media (max-width:1100px){
+  section.services .container{
+    padding: 0 5px;
+    margin: 0 10px;
+  }
+  section.services .services-info {
+    position: relative;
+    right: 10px;
+  }
+  section.services .services-info .info-ser{
+    border: 3px solid black;
+  }
+}
